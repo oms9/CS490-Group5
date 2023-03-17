@@ -16,8 +16,8 @@ export type TownJoinResponse = {
   /** Current state of interactables in this town */
   interactables: Interactable[];
 }
-
-export type Interactable = ViewingArea | ConversationArea;
+// TODO:  
+export type Interactable = ViewingArea | ConversationArea | SimonSaysArea;
 
 export type TownSettingsUpdate = {
   friendlyName?: string;
@@ -67,6 +67,12 @@ export interface ViewingArea {
   video?: string;
   isPlaying: boolean;
   elapsedTimeSec: number;
+}
+
+export interface SimonSaysArea {
+  id: string;
+  pattern?: string;
+  round: number;
 }
 
 export interface ServerToClientEvents {
