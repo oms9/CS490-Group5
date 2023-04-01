@@ -76,12 +76,36 @@ export default class SimonSaysArea extends InteractableArea {
     }
 
     /**
+     * Function to be used for random pattern, delay and duration generation
+     * NOTE: min is inclusive, max is exclusive, so use a +1 on the max call
+     */
+    private getRandInt(min: number, max: number){
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    /**
      * Generate a random pattern of blinks/events comprised of up/down/left/right as N/S/L/W
      * transporting over a socket to a client.
      */
     public generatePattern(len: number): string {
-      //TODO: implement pattern generation
-      throw new Error(`Not implemented yet: ${len}`);
+      const randIdx = this.getRandInt(0, 4);
+      const letter = "WASD"[randIdx];
+
+      for (var i = 0; i < len; i++){
+        if (this.pattern){
+          this._pattern = this.pattern + letter;
+        }
+        else{
+          this._pattern = letter;
+        }
+      }
+      if (this._pattern){
+        return this._pattern;
+      }else{
+        return letter;
+      }
     }
   
     /**
