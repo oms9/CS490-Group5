@@ -73,6 +73,15 @@ export interface SimonSaysArea {
   id: string;
   pattern?: string;
   round: number;
+  leaderboard: LeaderboardEntry[];
+}
+export interface LeaderboardEntry {
+  playerID: Player.id;
+  stats: {
+    currentSreak: number;
+    bestStreak: number;
+    lastPattern: string;
+  }
 }
 
 export interface ServerToClientEvents {
