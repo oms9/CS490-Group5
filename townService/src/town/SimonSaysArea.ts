@@ -17,6 +17,7 @@ export default class SimonSaysArea extends InteractableArea {
     private _round: number;
 
     private _leaderboard: LeaderboardEntry[];
+  static addEventListener: any;
 
     public get pattern() {
       return this._pattern;
@@ -195,4 +196,47 @@ export default class SimonSaysArea extends InteractableArea {
     private gameplayLoop(): void{
       throw new Error('not implemented yet');
     }
+    private capture(x: number): string{ 
+      // x is the length of the generated pattern
+      let input = ""; // player input is stored here 
+      for(let i = 0; i < x; i++){
+          SimonSaysArea.addEventListener(
+              "keydown",
+              (event: { defaultPrevented: any; code: string; preventDefault: () => void; }) => {
+              if (event.defaultPrevented) {
+                  return; // Do nothing if event already handled
+              }
+  
+              switch (event.code) {
+              case "KeyS":
+              case "ArrowDown":
+                  input = input.concat("s");
+                  break;
+              case "KeyW":
+              case "ArrowUp":
+                  input = input.concat("w");
+                  break;
+              case "KeyA":
+              case "ArrowLeft":
+                  input = input.concat("a")
+                  break;
+              case "KeyD":
+              case "ArrowRight":
+                  input = input.concat("d");
+                  break;
+              }
+  
+  
+          if (event.code !== "Tab") {
+          // Consume the event so it doesn't get handled twice,
+          // as long as the user isn't trying to move focus away
+          event.preventDefault();
+          }
+          
+      },
+      true
+      );
+      }
+      return input;
+  }
 }
