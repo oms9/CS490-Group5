@@ -1,0 +1,242 @@
+{
+    "id": "a6ce990e-2bbe-4d6b-86cc-1cefe4d9100b",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "snapWidth": 5,
+        "snapHeight": 5,
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "simonSaysScene",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 600
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "5be05c7e-7b93-468e-abce-317f8c46fec2",
+            "label": "redBackground",
+            "components": [],
+            "texture": {
+                "key": "redBackground"
+            },
+            "x": 300,
+            "y": 300
+        },
+        {
+            "type": "Image",
+            "id": "0ea5b9e6-9b37-4153-a23a-640fdbb2732b",
+            "label": "border",
+            "components": [],
+            "texture": {
+                "key": "border"
+            },
+            "x": 300,
+            "y": 300,
+            "scaleX": 0.07572997919,
+            "scaleY": 0.109446
+        },
+        {
+            "type": "Layer",
+            "id": "6433beea-89bb-4e43-8d4d-e40a81c3ccfc",
+            "label": "interactables",
+            "components": [],
+            "allowAppendChildren": true,
+            "list": [
+                {
+                    "type": "Triangle",
+                    "id": "9a228435-2f91-413e-993d-8249b4743961",
+                    "label": "sectionS",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "x": 300,
+                    "y": 430,
+                    "angle": -180,
+                    "isFilled": true,
+                    "fillColor": "#0000FF",
+                    "strokeColor": "#000000",
+                    "lineWidth": 5,
+                    "isStroked": true
+                },
+                {
+                    "type": "Triangle",
+                    "id": "1812c84e-999c-49e9-9ad3-5a12f374c103",
+                    "label": "sectionD",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "x": 450,
+                    "y": 280,
+                    "angle": 90,
+                    "isFilled": true,
+                    "fillColor": "#ff0000",
+                    "strokeColor": "#000000",
+                    "lineWidth": 5,
+                    "isStroked": true
+                },
+                {
+                    "type": "Triangle",
+                    "id": "a16036be-7489-4601-b3c1-622648ac7efe",
+                    "label": "sectionW",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "x": 300,
+                    "y": 130,
+                    "isFilled": true,
+                    "fillColor": "#00FF00",
+                    "strokeColor": "#000000",
+                    "lineWidth": 5,
+                    "isStroked": true
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "c79eddd9-bc76-431e-9165-6f356751f176",
+                    "label": "closeButton",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "x": 495,
+                    "y": 50,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5,
+                    "originX": 0,
+                    "originY": 0,
+                    "isFilled": true,
+                    "fillColor": "#242424",
+                    "strokeColor": "#000000",
+                    "lineWidth": 10,
+                    "isStroked": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Triangle",
+                    "id": "c98e2f53-1afa-4660-87e3-f966bd8331fb",
+                    "label": "sectionA",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "x": 150,
+                    "y": 280,
+                    "angle": -90,
+                    "isFilled": true,
+                    "fillColor": "#ffff00",
+                    "strokeColor": "#000000",
+                    "lineWidth": 5,
+                    "isStroked": true
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "81f0316b-7788-444e-8b40-a50ee5b8e289",
+                    "label": "ellipse_1",
+                    "components": [],
+                    "x": 300,
+                    "y": 280,
+                    "isFilled": true,
+                    "fillColor": "#000000",
+                    "lineWidth": 3.5,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "4ceb4d8d-6ab8-48cf-8fe1-cdd3a7efe8a7",
+                    "label": "timer",
+                    "components": [],
+                    "x": 300,
+                    "y": 280,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "---",
+                    "align": "center",
+                    "fontSize": "60px",
+                    "fontStyle": "bold"
+                },
+                {
+                    "type": "Text",
+                    "id": "de5fc3ab-391f-432b-98ed-53f7c568eb3b",
+                    "label": "closeX",
+                    "components": [
+                        "PushOnClick"
+                    ],
+                    "x": 505,
+                    "y": 45,
+                    "text": "X",
+                    "fontSize": "64px",
+                    "fontStyle": "bold",
+                    "color": "#FF0000",
+                    "stroke": "#000000ff",
+                    "strokeThickness": 4,
+                    "shadow.stroke": true
+                }
+            ]
+        },
+        {
+            "type": "Text",
+            "id": "432c88e3-bd29-475d-9d54-b8f62ac7c57f",
+            "label": "roundCounter",
+            "components": [],
+            "x": 35,
+            "y": 505,
+            "text": "Round: #NUMBER",
+            "fontSize": "54px",
+            "stroke": "#000000",
+            "strokeThickness": 8,
+            "shadow.stroke": true
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "ee1826a3-7786-4437-80bf-821c979b5c1e",
+            "type": "Keyboard.Key",
+            "label": "Wkey",
+            "keyCode": "W"
+        },
+        {
+            "id": "e7e48eb2-ea5a-4459-8766-97986fa730bd",
+            "type": "Keyboard.Key",
+            "label": "Akey",
+            "keyCode": "A"
+        },
+        {
+            "id": "4f701e2e-6afb-44ba-a834-984daeaff0d5",
+            "type": "Keyboard.Key",
+            "label": "SKey",
+            "keyCode": "S"
+        },
+        {
+            "id": "dca4fe86-d869-44b1-9503-8b9d1c96c411",
+            "type": "Keyboard.Key",
+            "label": "DKey",
+            "keyCode": "D"
+        },
+        {
+            "id": "be1338c6-5ace-465b-bc8d-081766e011e4",
+            "type": "Keyboard.Key",
+            "label": "UpKey",
+            "keyCode": "UP"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "lists": [
+        {
+            "id": "73b7d191-ad90-4386-a3d8-8cc656f8da6b",
+            "label": "arrows",
+            "objectIds": [
+                "9a228435-2f91-413e-993d-8249b4743961",
+                "a16036be-7489-4601-b3c1-622648ac7efe",
+                "c98e2f53-1afa-4660-87e3-f966bd8331fb",
+                "1812c84e-999c-49e9-9ad3-5a12f374c103"
+            ]
+        }
+    ]
+}
