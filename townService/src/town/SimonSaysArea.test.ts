@@ -9,7 +9,7 @@ describe('SimonSaysArea', () => {
   const testAreaBox = { x: 100, y: 100, width: 100, height: 100 };
   let testArea: SimonSaysArea;
   const id = nanoid();
-  const pattern = "WASD";
+  const pattern = 'WASD';
   const round = 1;
   let newPlayer: Player;
   const townEmitter = mock<TownEmitter>();
@@ -17,7 +17,7 @@ describe('SimonSaysArea', () => {
 
   beforeEach(() => {
     mockClear(townEmitter);
-    testArea = new SimonSaysArea({id, pattern, round, leaderboard}, testAreaBox, townEmitter);
+    testArea = new SimonSaysArea({ id, pattern, round, leaderboard }, testAreaBox, townEmitter);
     newPlayer = new Player(nanoid(), mock<TownEmitter>());
     testArea.add(newPlayer);
   });
@@ -95,8 +95,8 @@ describe('SimonSaysArea', () => {
   describe('generatePattern', () => {
     it('Generates a pattern of the specified length', () => {
       const patternLength = 10;
-      const pattern = testArea.generatePattern(patternLength);
-      expect(pattern.length).toBe(patternLength);
+      const longPattern = testArea.generatePattern(patternLength);
+      expect(longPattern.length).toBe(patternLength);
     });
   });
 });
