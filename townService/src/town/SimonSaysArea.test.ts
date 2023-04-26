@@ -33,7 +33,7 @@ describe('SimonSaysArea', () => {
       testArea.remove(newPlayer);
       expect(testArea.occupantsByID).toEqual([]);
     });
-    it("Clears the player's conversationLabel and emits an update for their location", () => {
+    it("Emits an update for the player's location", () => {
       mockClear(townEmitter);
       testArea.remove(newPlayer);
       expect(newPlayer.location.interactableID).toBeUndefined();
