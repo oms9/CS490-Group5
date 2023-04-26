@@ -9,8 +9,6 @@ import {
 } from '../types/CoveyTownSocket';
 import InteractableArea from './InteractableArea';
 
-import { removeThisFunctionCallWhenYouImplementThis } from '../Utils';
-
 /**
  * Function to be used for random pattern, delay and duration generation
  * NOTE: min is inclusive, max is exclusive, so use a +1 on the max call
@@ -27,6 +25,20 @@ export default class SimonSaysArea extends InteractableArea {
   private _round: number;
 
   private _leaderboard: LeaderboardEntry[];
+
+  private _flashDuration = 350;
+
+  private _quiet?: boolean;
+
+  private _monotone?: boolean;
+
+  private _monochrome?: boolean;
+
+  private _brokenbulb?: boolean;
+
+  private _mirror?: boolean;
+
+  private _chaos?: boolean;
 
   public get pattern() {
     return this._pattern;
@@ -199,10 +211,35 @@ export default class SimonSaysArea extends InteractableArea {
   }
 
   /**
-   * Main gameplay loop placeholder
+   * This function serves as the main gameplay loop for SimonSays.
    */
   private _gameplayLoop(): void {
-    this._round += 1;
-    throw new Error('not implemented yet');
+    if (this.round === 0) {
+      this._round = 1;
+    }
+
+    while (this._occupants.length !== 0) {
+      this._pattern = this.generatePattern(this._round);
+
+      for (let i = 0; i < this._pattern.length; i++) {
+        /*
+          This is where a "flash" event happens (AKA Pattern preview)
+          a "flash" event is a function call to a front-end function that takes
+          the direction and the duration of the flash as arguments.
+          It then flashes/activates the corresponding section for the length of Duration.
+          the "duration" is async sleep while the section is "active"
+        */
+      }
+    }
+
+    // At this point, the pattern should have previewed successfuly and now
+    // it is time to capture user input and make sure it is correct.
+
+    // user input is correct: increment round counter and continue the loop
+    // else: push a leaderboard update with the current pattern and round num.
+
+    // the exit condition is manually triggered by the user clicking the X button
+    // on the top right of the window, which would remove them from area but not destroy it
+    // which gives us a chance to save the player/leaderobard stats and end gracefully.
   }
 }
