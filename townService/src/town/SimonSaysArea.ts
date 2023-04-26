@@ -123,9 +123,9 @@ export default class SimonSaysArea extends InteractableArea {
    * transporting over a socket to a client.
    */
   public generatePattern(len: number): string {
-    const randIdx = getRandInt(0, 4);
-    const letter = 'WASD'[randIdx];
+    let letter = 'WASD'[getRandInt(0, 4)];
     for (let i = 0; i < len; i++) {
+      letter = 'WASD'[getRandInt(0, 4)];
       if (this.pattern) {
         this._pattern = this.pattern + letter;
       } else {

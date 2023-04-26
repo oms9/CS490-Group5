@@ -9,7 +9,7 @@ describe('SimonSaysArea', () => {
   const testAreaBox = { x: 100, y: 100, width: 100, height: 100 };
   let testArea: SimonSaysArea;
   const id = nanoid();
-  const pattern = 'WASD';
+  const pattern = '';
   const round = 1;
   let newPlayer: Player;
   const townEmitter = mock<TownEmitter>();
@@ -23,7 +23,7 @@ describe('SimonSaysArea', () => {
   });
   describe('testArea is set up', () => {
     it('initializes correctly', () => {
-      expect(testArea.pattern).toBe('WASD');
+      expect(testArea.pattern).toBe(pattern);
       expect(testArea.round).toBe(1);
       expect(testArea.leaderboard).toEqual([]);
     });
