@@ -1,3 +1,4 @@
+
 # CS490 Group 5 Project
 
 This is Group 5's project submission for NJIT's CS490 (Spring 2023) as instructed by [Martin Kellogg](https://web.njit.edu/~mjk76/)
@@ -29,5 +30,9 @@ The planned modifiers are:
 | **Mirror** | *Swaps the two opposing arcs in the pattern (N → S)* |
 | **Chaos** | *Faster ramp-up, mismatched sound, fast timeout.* |
 
-## UI Preview:
-### Under construction.
+## UI Preview: 
+
+SimonSaysUI with Right arrow event | SimonSaysUI during normal gameplay
+:------------------------------------|------------------------------------:
+![SimonSaysUI with Right arrow event](https://user-images.githubusercontent.com/102495444/236100641-8d780709-234f-46fb-9b5e-073a14760f6d.png) |![SimonSaysUI during normal gameplay](https://user-images.githubusercontent.com/102495444/236100638-5458c0f1-3c42-4f74-8b9d-72271be44177.png)
+ This shows how the UI would look like while the game is previewing the next move in the pattern (Right here) and that is why the countdown/time remaining tracker shows "---" instead of a number.| This shows how the UI would look like during gameplay with 9 seconds remaining in the round.
